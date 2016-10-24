@@ -53,6 +53,10 @@ class controller_salary extends model_salary_class {
 		$this->show->assign('tx_url', '?model=salary&action=hr_tx');
 		//项目明细导入
 		$this->show->assign('prod_url', '?model=salary&action=hr_prod');
+		// 考核工资总表
+		$this->show->assign ( 'pro_url', '?model=salary&action=hr_pro' );
+		// 薪资结构
+		$this->show->assign( 'user_salary_url', '?model=salary&action=hr_user_salary');
 		$this->show->display('salary_hr-exa');
 	}
 	/**
