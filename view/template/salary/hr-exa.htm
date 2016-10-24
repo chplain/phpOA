@@ -16,9 +16,9 @@
         <title></title>
         <style type="text/css">
             html, body {
-                margin: 0;			/* Remove body margin/padding */
+                margin: 0;          /* Remove body margin/padding */
                 padding: 0;
-                overflow: hidden;	/* Remove scroll bars on browser window */
+                overflow: hidden;   /* Remove scroll bars on browser window */
                 font-size: 9pt;
             }
             .btn{
@@ -92,7 +92,7 @@
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="员工补贴" class="btn" onclick="newParentTab('{sdy_url}', '员工补贴','8')"/>
                             </div>
-                            <div class="nbtn" style="display:{display}">
+                            <div class="nbtn" >
                                 <input type="button" value="未审核信息" class="btn" onclick="newParentTab('{wsh_url}', '未审核信息','9')"/>
                             </div>
                             <div class="nbtn" style="display:{display}">
@@ -118,39 +118,24 @@
                             </div>
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="基本工资导入" class="btn"
-                                	onclick="tb_show('基本工资导入', '{jb_url}&TB_iframe=true&height=600');"/>
+                                    onclick="tb_show('基本工资导入', '{jb_url}&TB_iframe=true&height=600');"/>
                             </div>
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="岗位工资导入" class="btn"
-                                	onclick="tb_show('岗位工资导入', '{gw_url}&TB_iframe=true&height=600');"/>
+                                    onclick="tb_show('岗位工资导入', '{gw_url}&TB_iframe=true&height=600');"/>
                             </div>
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="工程工资导入" class="btn"
-                                	onclick="tb_show('工程工资导入', '{gc_url}&TB_iframe=true&height=600');"/>
+                                    onclick="tb_show('工程工资导入', '{gc_url}&TB_iframe=true&height=600');"/>
                             </div>
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="通信津贴导入" class="btn"
-                                	onclick="tb_show('通信津贴导入', '{tx_url}&TB_iframe=true&height=600');"/>
+                                    onclick="tb_show('通信津贴导入', '{tx_url}&TB_iframe=true&height=600');"/>
                             </div>
 
                             <div class="nbtn" style="display:{display}">
                                 <input type="button" value="工程项目明细" class="btn"
                                 onclick="newParentTab('{prod_url}', '工程项目明细','81')"/>
-                            </div>
-
-                            <div class="nbtn" style="display:{display}">
-                                <input type="button" value="网优薪酬" class="btn"
-                                onclick="newParentTab('{pro_url}', '网优薪酬','810')"/>
-                            </div>
-                            
-                            <div class="nbtn" style="display:{display}">
-                                <input type="button" value="薪资结构" class="btn"
-                                onclick="newParentTab('{user_salary_url}', '薪资结构','811')"/>
-                            </div>
-                            
-                            <div class="nbtn" style="display:{display}">
-                                <input type="button" value="调薪记录" class="btn"
-                                onclick="newParentTab('{user_adjust_url}', '调薪记录','812')"/>
                             </div>
 
                         </div>
