@@ -10014,7 +10014,7 @@ where
             $sql = "update
                     hols_sta s
                 set s.checkflag='1'
-                where  s.syear='" . $this->nowy . "' and s.smon='" . $this->nowm . "' and s.checkflag<>'1' ";
+                where  s.syear='" . $this->nowygit  . "' and s.smon='" . $this->nowm . "' and s.checkflag<>'1' ";
             $this->db->query_exc ( $sql );
             $this->db->query ( "COMMIT" );
             $this->globalUtil->insertOperateLog ( '工资管理', 'salary', '请休假上交', '成功', $sql );
@@ -11895,7 +11895,7 @@ where
                                     from user where user_id='" . $val ['userid'] . "' ";
                             $this->db->query_exc ( $sql );
                             
-                            $usercom = $this->db->get_one ( "select usercom from salary s where s.userid = '" + $val ['userid'] + "'" );
+                            $usercom = $this->db->get_one ( "select usercom from salary s where s.userid = '" . $val ['userid'] . "'" );
                             $flowname = $this->flowName ['spe_' . $val ['员工类型']];
                             if ($usercom ['usercom'] == 'xs') {
                                 $flowname = $this->flowName ['spe_xs_' . $val ['员工类型']];
