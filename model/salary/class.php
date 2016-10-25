@@ -2473,6 +2473,7 @@ class model_salary_class extends model_base {
                    $temparr[$row['rand_key']]['sdymeal']=$row['sdymeal'];
                    $temparr[$row['rand_key']]['sdyother']=$row['sdyother'];
                    $temparr[$row['rand_key']]['userlevel']=$row['userlevel'];
+                   $temparr [$row ['rand_key']]['usercom']=$row['usercom'];
                 }
                 if(!empty($temparr)){
                     foreach($temparr as $key=>$val){
