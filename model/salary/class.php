@@ -2950,6 +2950,7 @@ department d on u.DEPT_ID = d.DEPT_ID where 1 = 1 $sqlSch ";
                     $temparr [$row ['rand_key']] ['sdymeal'] = $row ['sdymeal'];
                     $temparr [$row ['rand_key']] ['sdyother'] = $row ['sdyother'];
                     $temparr [$row ['rand_key']] ['userlevel'] = $row ['userlevel'];
+                    $temparr [$row ['rand_key']] ['usercom'] = $row['usercom'];
                 }
                 if (! empty ( $temparr )) {
                     foreach ( $temparr as $key => $val ) {
