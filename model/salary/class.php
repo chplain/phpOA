@@ -2938,6 +2938,7 @@ department d on u.DEPT_ID = d.DEPT_ID where 1 = 1 $sqlSch ";
                     from salary_sdy s
                         left join salary_pay p on ( s.userid=p.userid and s.pyear=p.pyear and s.pmon=p.pmon ) 
                         left join hrms h on h.USER_ID = s.UserId 
+                		left join salary sp on h.user_id = sp.userid
                     where
                         s.creator='" . $_SESSION ['USER_ID'] . "'
                         and s.pyear='" . $this->nowy . "' and s.pmon='" . $this->nowm . "'
