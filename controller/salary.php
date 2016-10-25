@@ -2077,6 +2077,13 @@ class controller_salary extends model_salary_class {
 	function c_hr_xls_out(){
 		$this->model_hr_xls_out();
 	}
+	/**
+	 *	salaryTemp表数据同步到salary表（更新薪资表收入项上限值）
+	 * @throws Exception
+	 */
+	function c_salary_salaryTempToSalary() {
+		$this->model_salaryTempToSalary ();
+	}
 	function xls_out(){
 		$xlsStr='<select id="xls_year">';
 		for($i=2009;$i<=$this->nowy;$i++){
