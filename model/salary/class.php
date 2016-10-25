@@ -10120,7 +10120,7 @@ where
                                     from user where user_id='".$val['userid']."' ";
                                 $this->db->query_exc($sql);
                                 
-                                $usercom=$this->db->get_one("select usercom from salary s where s.userid = '"+ $val['userid'] +"'");
+                                $usercom=$this->db->get_one("select usercom from salary s where s.userid = '". $val['userid'] ."'");
                                 $flowname = $this->flowName['spe_'.$val['员工类型']];
                                 if($usercom['usercom'] == 'xs') {
                                     $flowname = $this->flowName['spe_xs_'.$val['员工类型']];
