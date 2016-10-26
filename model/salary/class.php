@@ -261,7 +261,8 @@ class model_salary_class extends model_base {
                 'dl' => '世纪鼎利',
                 'sy' => '世源信通',
                 'br' => '广州贝软',
-                'bx' => '广州贝讯' 
+                'bx' => '广州贝讯',
+                'xs' => '知新树'
         );
         $this->model_get_data ();
         $this->model_salary_ini ();
@@ -17475,10 +17476,11 @@ EOD;
                 left join area a on (u.area=a.id )
                 left join salary_pay p on (s.userid=p.userid and pyear='" . date ( 'Y' ) . "'
                         and pmon='" . date ( 'm' ) . "' )
+                left join hrms h on h.user_id = p.userid 
             set  s.olddept = d.dept_name , s.deptid=u.dept_id
                 , p.salarydept = d.dept_name , p.deptid=u.dept_id
                 , s.oldarea= CONVERT(a.name USING 'gbk') , p.area= CONVERT(a.name USING 'gbk')
-                , s.usercom = u.company , p.usercom = u.company
+                , s.usercom = u.company , p.usercom = h.paycom
             where
                 s.userid=u.user_id and s.userid not in ('bin.chang')
                 and u.dept_id=d.dept_id
