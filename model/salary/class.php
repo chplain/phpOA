@@ -2938,7 +2938,7 @@ department d on u.DEPT_ID = d.DEPT_ID where 1 = 1 $sqlSch ";
                     from salary_sdy s
                         left join salary_pay p on ( s.userid=p.userid and s.pyear=p.pyear and s.pmon=p.pmon ) 
                         left join hrms h on h.USER_ID = s.UserId 
-                		left join salary sp on h.user_id = sp.userid
+                        left join salary sp on h.user_id = sp.userid
                     where
                         s.creator='" . $_SESSION ['USER_ID'] . "'
                         and s.pyear='" . $this->nowy . "' and s.pmon='" . $this->nowm . "'
@@ -2951,7 +2951,7 @@ department d on u.DEPT_ID = d.DEPT_ID where 1 = 1 $sqlSch ";
                     $temparr [$row ['rand_key']] ['sdymeal'] = $row ['sdymeal'];
                     $temparr [$row ['rand_key']] ['sdyother'] = $row ['sdyother'];
                     $temparr [$row ['rand_key']] ['userlevel'] = $row ['userlevel'];
-                    $temparr [$row ['rand_key']] ['usercom'] = $row['usercom'];
+                    $temparr [$row ['rand_key']]['usercom']=$row['usercom'];
                 }
                 if (! empty ( $temparr )) {
                     foreach ( $temparr as $key => $val ) {
@@ -10016,7 +10016,7 @@ where
             $sql = "update
                     hols_sta s
                 set s.checkflag='1'
-                where  s.syear='" . $this->nowygit  . "' and s.smon='" . $this->nowm . "' and s.checkflag<>'1' ";
+                where  s.syear='" . $this->nowy . "' and s.smon='" . $this->nowm . "' and s.checkflag<>'1' ";
             $this->db->query_exc ( $sql );
             $this->db->query ( "COMMIT" );
             $this->globalUtil->insertOperateLog ( '工资管理', 'salary', '请休假上交', '成功', $sql );
